@@ -1,0 +1,97 @@
+
+
+/*Tipo de fuente global*/
+*{
+    font-family:"Century Gothic";
+}
+
+.calma{
+    width:40%;
+    max-width: 100px;
+    margin: auto;
+}
+
+.card {
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+    
+}
+.card {
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+}
+.border-light {
+    border-color: #ddd!important;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.signup-or-separator {
+    color: #222;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+.text-center {
+    text-align: center!important;
+}
+h6 {
+    display: block;
+    font-size: 0.99em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-weight: 700;
+}
+.m-0 {
+    margin: 0!important;
+    
+}
+.d-inline-block {
+    display: inline-block!important;
+}
+
+.limitar{
+    width: 10%;
+    max-width: 50px;
+    margin: auto;
+  }
+
+.opac2:hover{
+    opacity: 0.9;
+  }
+
+.opcacol:hover{
+    color: #7839BA;
+}
+
+hr:not([size]) {
+    height: 1px;
+}
+hr {
+    background-color: currentColor;
+    border: 0;
+    color: inherit;
+    margin: 1rem 0;
+    opacity: .25;
+}
+.estilnav{
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.515);
+    background-color: #7839BA;
+  }
+
+.so{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+}
