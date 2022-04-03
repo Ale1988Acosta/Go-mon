@@ -31,13 +31,13 @@
     max-width: 500px;
     min-width: 100px;
     margin:auto;
-    border-radius: 25px;
+    border-radius: 10px;
     display: block;
 }
 
 .button{
     margin: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
   
   h3{
@@ -47,7 +47,7 @@
     }
 
 .forinp{
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .imagens{
@@ -112,7 +112,7 @@
     padding: 30px;
   }
 
-  .termino{
+.termino{
     margin-top: 60px;
     background-color:darkorchid;
     padding-top: 40px;
@@ -132,4 +132,20 @@
     color: white;
     width: 100%;
     max-width: 35px;
+    margin-top: 10px;
+}
+
+.margen{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cuadroreser{
+    background: white;
+    border: 2px solid #7839BA;
+    width: 100%; 
+    border-radius: 10px;
+    max-width: 600px;
 }
