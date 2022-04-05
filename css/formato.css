@@ -93,8 +93,7 @@ h3,h6{
 .imgradio{
     margin: auto;
     width: 100%;
-    width: 125px;
-    border-radius: 50px;
+    width: 100px;
     padding: 10px;
 }
 
@@ -229,4 +228,33 @@ table{
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.calmaicon3{
+    width:100%;
+    max-width: 19px;
+    margin: auto;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.limitar{
+    width: 10%;
+    max-width: 50px;
+    margin: auto;
+}
+
+.sepa{
+    margin-top: 5%;
+    
+}
+
+.separaciontex{
+    margin-top: 2%;
+}
+  
+.separacion_icon{
+    margin-top: 10%;
 }
