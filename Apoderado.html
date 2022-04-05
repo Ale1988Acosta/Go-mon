@@ -23,13 +23,7 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ms-auto"> 
               <li class="navbar-toggle ms-auto">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: rgb(255, 255, 255);">Mi Sesion</a>
-                <ul class="dropdown-menu ms-auto">
-                  <li><a class="dropdown-item" href="#">Cuenta</a></li>
-                  <li><a class="dropdown-item" href="#">Informacion del Menor</a></li>
-                  <li><a class="dropdown-item" href="#">Calendario de Servicios</a></li>
-                  <li><a class="dropdown-item" href="#">Mensajes</a></li>
-                </ul>
+                <a style="color: rgb(255, 255, 255);">Mi Sesion</a>
               </li>
             </ul>
             <a class="navbar-brand" href="#">
@@ -99,17 +93,15 @@
             <form>
                 <div class="row">
                   <div class="col-md-6 col-sm-12">
-                    <p>Genero*:</p>
+                    <p style="margin-top: 10px;">Sexo*:</p>
                     <select type="text"  class="form-select form-control" placeholder="Femenino" name="genero" style="border-radius: 50px;">
-                      <option>Femenino</option>
-                      <option>Masculino</option>
-                      <option>Otro</option>
-                      <option>Indefinido</option>
+                      <option>Mujer</option>
+                      <option>Hombre</option>
                     </select>
                   </div>
                   <div class="col-md-6 col-sm-12">
-                    <p>Correo electronico*:</p>
-                    <input type="text" class="form-control" placeholder="nataliaromerotorres@gmail.com" name="email" style="border-radius: 50px;">
+                    <p style="margin-top: 10px;">Numero telefonico*:</p>
+                    <input type="text" class="form-control" placeholder="934732894" name="number" onkeypress="if( event.keycode < 45 || event.keyCode > 57) event.returnValue=false;" style="border-radius: 50px;">
                   </div>
                 </div>
             </form>
@@ -117,31 +109,37 @@
             <form>
                 <div class="row">
                   <div class="col-md-6 col-sm-12">
-                    <p>Contraseña*:</p>
+                    <p style="margin-top: 10px;">Correo electronico*:</p>
+                    <input type="text" class="form-control" placeholder="nataliaromerotorres@gmail.com" name="email" style="border-radius: 50px;">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                    <p style="margin-top: 10px;">Contraseña*:</p>
                     <input type="password" class="form-control" placeholder="*******" name="pswd" style="border-radius: 50px;">
                   </div>
-                  <div class="col-md-6 col-sm-12">
-                    <p>Numero telefonico*:</p>
-                    <input type="text" class="form-control" placeholder="934732894" name="number" onkeypress="if( event.keycode < 45 || event.keyCode > 57) event.returnValue=false;" style="border-radius: 50px;">
-                  </div>
+
                 </div>
             </form>
 
             <form>
                 <div class="row" style="border-radius: 10px;">
                   <div class="col-md-6 col-sm-12">
-                    <p>Direccion*:</p>
+                    <p style="margin-top: 10px;">Direccion*:</p>
                     <input type="text" class="form-control" placeholder="Avenida Conchalí 3428" name="direccion" style="border-radius: 50px;">
                   </div>
                   <div class="col-md-6 col-sm-12">
-                    <p>Comuna*:</p>
+                    <p style="margin-top: 10px;">Comuna*:</p>
                     <input type="text" class="form-control" placeholder="Conchalí" name="comuna" style="border-radius: 50px;">
                   </div>
                 </div>
             </form>
-            <button type="submit" class="btn btn-primary" >Guardar</button>
-
-            <h3>Verificacion de la Identidad</h3>
+            <center>
+            <div class="col-md-12 col-md-12">
+                <button type="submit" class="btn btn-primary" style="margin-top: 5%; ">Guardar</button>
+            </div>
+            </center>
+            
+            <h3 style="margin-top: 5%;">Verificacion de la Identidad</h3>
             <div class="row mb-3 " style="margin-top: 5%;">
               <label1 for="cedula" class="col-sm-2 col-form-label">Cedula de Identidad*</label1>
               <div class="col-sm-10">
@@ -155,9 +153,9 @@
                 <input class="form-control" type="file" id="formFileMultiple" multiple style="border-radius: 50px;">
               </div>
             </div>
-
+            <center>
             <button type="submit" class="btn btn-primary" style="margin-top: 5%;" >Enviar</button>
-
+            </center>
 
 </div>
 <div id="Informacion" class="container tab-pane fade"><br>
@@ -182,29 +180,24 @@
 
               <form>
                 <div class="row">
-                  <div class="col-md-6 col-sm-12">
+                  <div class="col-md-6 col-sm-12" style="margin-top: 2%;">
                     <p>Sexo*:</p>
                     <select type="text"  class="form-select form-control" placeholder="Femenino" name="genero" style="border-radius: 50px;">
                       <option>Mujer</option>
                       <option>Hombre</option>
                     </select>
-                    <br>
+                  </div>
+                  <div class="col-md-6 col-sm-12" style="margin-top: 2%; border-radius: 50px;""> 
+                    <p>Fecha de Nacimiento*:</p>
+                    <label for="start"  class="form-label" style="margin: 11px;"></label>
+                    <input type="date" id="start" name="start" value="2022-03-28" min="2022-03-28" max="2022-12-31" class="forinp">
                   </div>
                 </div>
               </form>
-
-
-            <form>
-            <div class="row">
-                <div class="col-md-6 col-sm-12"> 
-                  <label for="start"  class="form-label" style="margin: 11px;">Fecha de Nacimiento*:</label>
-                  <input type="date" id="start" name="start" value="2022-03-28" min="2022-03-28" max="2022-12-31" class="forinp">
-                </div>
-            </div>
-            </form>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-
-            <h3>Verificacion de la Identidad</h3>
+            <center>
+            <button type="submit" class="btn btn-primary" style="margin-top: 5%; ">Guardar</button>
+            </center>  
+            <h3 style="margin-top: 5%;">Verificacion de la Identidad</h3>
             <div class="row mb-3 " style="margin-top: 5%;">
               <label1 for="cedula" class="col-sm-2 col-form-label">Cedula de Identidad*</label1>
               <div class="col-sm-10">
@@ -218,23 +211,32 @@
                 <input class="form-control" type="file" id="formFileMultiple" multiple style="border-radius: 50px;">
               </div>
             </div>
-
-
-            <button type="submit" class="btn btn-primary" style="margin-top: 5%;" >Enviar</button>
-
+            <center>
+            <div style="right:ms auto;">
+            <button type="submit" class="btn btn-primary" style="margin-top: 5%; " >Enviar</button>
+            </div>
+            </center>
           
 
         
         
 </div>
-<div id="calendario" class="container tab-pane fade"><br>
-            
-                <form action="../../form-result.php" target="_blank">
+<div id="calendario" class="container tab-pane fade">
+    <div class="col-md-6 col-sm-12">
+        <p>
+        <button type="button" class="btn btn-primary" style="width:100px; height: 30px; color: blue;"></button> Disponibles
+      </p>
+      <p>
+        <button type="button" class="btn" style="width:100px; height: 30px;color: white; border-color: black;"></button> Reserva
+      </p>
+      </div>
+            <div style="margin: auto; text-align: center;">
+                <form action="../../form-result.php" target="_blank" >
 
                     <p>Selecciona una semana: <input type="week" name="unasemana" value="2022-04-06" min="2022-W14" max="2031-W24""></p>
                   
                 </form>
-                        
+            </div>            
                 
                 <div class="container mt-3" >           
                     <table class="table table-responsive">
@@ -260,7 +262,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                             </div>
                         </td>
                         <td> 
@@ -270,7 +272,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                             </div>
                         </td>
                         <td> 
@@ -280,7 +282,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                             </div>
                         </td>
                         <td> 
@@ -293,7 +295,7 @@
                           <td>09:00 - 09:50</td>
                           <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                             </div>
                         </td>
                         <td> 
@@ -303,7 +305,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                             </div>
                         </td>
                         <td> 
@@ -313,7 +315,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                             </div>
                         </td>
                         <td> 
@@ -323,7 +325,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                             </div>
                         </td>
                         </tr>
@@ -336,7 +338,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                             </div>
                         </td>
                         <td> 
@@ -346,7 +348,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                             </div>
                         </td>
                         <td> 
@@ -356,7 +358,7 @@
                         </td>
                         <td> 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                             </div>
                         </td>
                         <td> 
@@ -369,7 +371,7 @@
                             <td>11:00 - 11:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -379,7 +381,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -389,7 +391,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -399,7 +401,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                         </tr>
@@ -412,7 +414,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -422,7 +424,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -432,7 +434,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -445,7 +447,7 @@
                             <td>13:00 - 13:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -455,7 +457,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -465,7 +467,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -475,7 +477,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                         </tr>
@@ -488,7 +490,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -498,7 +500,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -508,7 +510,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -521,7 +523,7 @@
                             <td>15:00 - 15:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -531,7 +533,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -541,7 +543,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -551,7 +553,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                         </tr>
@@ -559,7 +561,7 @@
                             <td>16:00 - 16:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -569,7 +571,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -579,7 +581,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -589,7 +591,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                         </tr>
@@ -602,7 +604,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -612,7 +614,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -622,7 +624,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -635,7 +637,7 @@
                             <td>18:00 - 18:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -645,7 +647,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -655,7 +657,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -665,7 +667,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                         </tr>
@@ -678,7 +680,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -688,7 +690,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -698,7 +700,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -711,7 +713,7 @@
                             <td>20:00 - 20:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -721,7 +723,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -731,7 +733,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -741,7 +743,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                         </tr>
@@ -754,7 +756,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -764,7 +766,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -774,7 +776,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -787,7 +789,7 @@
                             <td>22:00 - 22:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -797,7 +799,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -807,7 +809,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -817,7 +819,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                         </tr>
@@ -830,7 +832,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -840,7 +842,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -850,7 +852,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -863,7 +865,7 @@
                             <td>00:00 - 00:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -873,7 +875,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -883,7 +885,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -893,7 +895,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                         </tr>
@@ -906,7 +908,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -916,7 +918,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -926,7 +928,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -939,7 +941,7 @@
                             <td>02:00 - 02:50</td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something">
                                 </div>
                             </td>
                             <td> 
@@ -949,7 +951,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -959,7 +961,7 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                             <td> 
@@ -969,19 +971,18 @@
                             </td>
                             <td> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                                 </div>
                             </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-
-
-
-
-
-
+                  <center>
+                    <div class="col-md-12 col-md-12">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    </center>
 
 
 </div>
