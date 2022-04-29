@@ -73,7 +73,7 @@
         <div id="home" class="container tab-pane active"><br>
 
             <h3 style="color: #7839BA;"><b>Datos Personales</b></h3>
-            <form>
+            <form action="" method="POST" name="formulario" id="form1">
                 <div class="row" >
                 <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Nombre*:</p>
@@ -84,35 +84,28 @@
                     <input type="text" class="form-control" name="apellidos" style="border-radius: 50px;" value="Fernández" readonly>  
                 </div>
                 </div>
-            </form>
-
-            <form>
                 <div class="row">
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Correo:*</p>
-                    <input type="text" class="form-control" value="bab.fernández@gmail.com" name="email" style="border-radius: 50px;">
+                    <input type="text" class="form-control" value="bab.fernández@gmail.com" name="email" style="border-radius: 50px;" readonly>
                     </div>
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Contraseña:*</p>
-                    <input type="text" class="form-control" name="email" style="border-radius: 50px;" value="***********" readonly>
+                    <input type="password" class="form-control" name="email" style="border-radius: 50px;" value="123456789" readonly>
                     </div>
                 </div>
-            </form>
-
-
-            <form>
                 <div class="row" style="border-radius: 10px; ">
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Direccion:</p>
-                    <input type="text" class="form-control" value="Avenida Independencia 123" name="direccion" style="border-radius: 50px;">
+                    <input type="text" class="form-control" value="Avenida Independencia 123" name="direccion" style="border-radius: 50px;" readonly>
                     </div>
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Comuna:</p>
-                    <input type="text" class="form-control" value="Independencia" name="comuna" style="border-radius: 50px;">
+                    <input type="text" class="form-control" value="Independencia" name="comuna" style="border-radius: 50px;" readonly>
                     </div>
                 </div>
             </form>
-            <button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px; ">Guardar</button>
+            <a href="perfil_editar.html" style="text-decoration: none;" ><button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px;">Editar Datos</button></a>
             <a href="descripcion2.html" style="text-decoration: none;" ><button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px;">Otros datos</button></a>
           </div>
           <div id="menu1" class="container tab-pane "><br>
