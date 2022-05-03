@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gomon_presentacion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    // Con un cdn
+    https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js
     <link tipe="text/css" rel="stylesheet" href="css/formato.css">
     <link tipe="text/css" rel="stylesheet" href="css/diseno.css">
     <link rel="icon" type="image/x-icon" href="imagenes/Go_monCR.png">
@@ -39,53 +43,39 @@
         </div>
       </nav>
     
-      <div class="container mt-3">
-        <h3 class="titulo" style="margin-top: 120px;">Mi información</h3>
-        <br>
-        <!-- Nav pills -->
-        <ul class="nav nav-pills" role="tablist">
-          <li class="nav-item" >
-            <a class="nav-link active" data-bs-toggle="pill" href="#presentacion">Presentación</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="#info">Respecto a los Cuidados</a>
-          </li>
-        </ul>
-      
-        <!-- Tab panes -->
-        <div class="tab-content cuadro">
-          <div id="presentacion" class="container tab-pane active"><br>
-            
+        <div class="container" style="margin-top: 100px;">
+            <form action="" method="POST" name="formulario" id="form1">
             <div class="row">
-                <h3>Datos Personales</h3>
-            </div>
-            <div class="row">
+                <h2 style="border: 5px solid royalblue; border-radius: 10px; text-align: center; padding: 10px; color: #7839BA; width: 100%; max-width: 500px; margin: auto;" >Información del cuidador</h2>
+                <h3 style="margin-top: 15px;">Datos Personales</h3>
+                <div class="col-md-3 col-sm-12"></div>
                 <div class="col-md-6 col-sm-12">
-                    <img src="imagenes\slide2.jpg" alt="No encontrada" class="pimag">
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <label for="start"  class="form-label" style="margin: 20px;">Fecha de Nacimiento:</label>
-                    <input type="date" id="start" name="start" value="2022-04-06" min="1930-01-01" max="2022-04-06" style="width: 100%;" class="forinp">
-                    <label for="validationDefault04" class="form-label" style="margin: 10px;">Sexo:</label>
-                    <select class="form-select  forinp" id="validationDefault04" required>
+                    <div class="form-group">
+                        <label class="form-label">Fecha de Nacimiento*:</label>
+                        <input type="date" id="nacim" name="nacimiento" style="width: 100%;" class="forinp form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" style="margin-top: 10px;">Sexo*:</label>
+                        <select class="form-select  forinp" required>
                         <option selected disabled value="">Escoge...</option>
-                        <option>Mujer</option>
-                        <option>Hombre</option>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                        <option>Otros</option>
                     </select>
-                <div class="input-group">
-                    <label for="telf" class="form-label" style="margin: 10px;">Telefono:</label>
-                    <div class="input-group">
-                        <span class="input-group-text forinp">+56</span>
-                        <input type="text" class="form-control forinp" id="telf" name="telf" onkeypress="if( event.keycode < 45 || event.keyCode > 57) event.returnValue=false;">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" style="margin-top: 10px;">Telefono*:</label>
+                        <div class="input-group">
+                            <span class="input-group-text forinp">+56</span>
+                            <input type="text" class="form-control forinp" id="telf" name="telf" required>
+                        </div>
                     </div>
                 </div>
-                </div>
+                <div class="col-md-3 col-sm-12"></div>
             </div>
             
             <div class="row" style="margin-top: 35px;">
                 <h3>Foto de Presentación</h3>
-            </div>
-            <div class="row">
                 <div class="col-md-4 col-sm-12 foto">
                     <img id="frame" src="imagenes\descarga.png" class="fotperf"/>
                     <script>
@@ -93,15 +83,14 @@
                         frame.src = URL.createObjectURL(event.target.files[0]);
                     }
                     function clearImage() {
-                        document.getElementById('formFile').value = null;
+                        document.getElementById('Image').value = null;
                         frame.src = "";
                     }
                     </script>
                 </div>
                 <div class="col-md-8 col-sm-12">
-                    <label for="Image" class="form-label" style="margin-bottom: 20px;">Seleccione una imagen suya para el perfil</label>
-                    <input class="form-control forinp" type="file" id="formFile" onchange="preview()">
-                    <button onclick="Image()" class="btn btn-primary button" style="background-color: #7839BA; border-color: #7839BA;">Subir archivo</button>
+                    <label for="Image" class="form-label" style="margin-bottom: 20px;">Seleccione una imagen suya para el perfil*</label>
+                    <input class="form-control forinp" type="file" id="Image" onchange="preview()" required>
                 </div>
             </div>
         
@@ -110,7 +99,7 @@
             </div>
             <div class="letras">
                 <label for="recording" class="form-label">ingrese el enlace del video</label>
-                <input type="text" class="form-control forinp inp" id="recording" placeholder="video" name="recordinglist">
+                <input type="text" class="form-control forinp inp" id="recording" placeholder="video" name="recording">
             </div>
 
             <div class="row" style="margin-top: 35px;">
@@ -118,9 +107,10 @@
             </div>
             
             <div class="row">
-                    <label for="comment">Recuerda: No mas de 80 palabras.</label>
+                    <label for="descrip">Recuerda: Es obligatoria y debes ingresar al menos 20 palabras aceptando como maximo 80.</label>
                     <div class="col-md-8 col-sm-12">
-                    <textarea class="form-control forinp" rows="5" id="comment" name="text"></textarea>
+                    <textarea class="form-control forinp" rows="5" id="descrip" name="descrip" required></textarea></textarea>
+                    <p id="mensajedescrip"></p>
                     </div>
                     <div class="col-md-4 color col-sm-12">
                       <p>   Preséntate de la manera más detallada posible.<br>
@@ -134,28 +124,25 @@
 
             <div class="row">
                 <center>
-                <h3>Informacion extra:</h3>
+                    <h3>Informacion extra:</h3>
                 </center>
-            </div>
-
-                <div class="row">
-                    <div class="relative">
+                <div class="relative">
                         <div class="row">
                             <div class="col-md-5 col-sm-12">
                                 <img src="imagenes/fuma.png" class="imgradio" alt="No encontrada">
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Soy fumador</p>
+                                    <p>Soy fumador*:</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline" >
-                                        <input type="radio" class="form-check-input" id="radio1" name="fuma" value="option1">
-                                        <label class="form-check-label" for="radio1">Sí</label>
+                                        <input type="radio" class="form-check-input" id="fuma" name="fuma" value="si" required>
+                                        <label class="form-check-label" for="fuma">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio2" name="fuma" value="option2">
-                                        <label class="form-check-label" for="radio2">No</label>
+                                        <input type="radio" class="form-check-input" id="fuma" name="fuma" value="no">
+                                        <label class="form-check-label" for="fuma">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -171,16 +158,16 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Tengo hijos</p>
+                                    <p>Tengo hijos*:</p>
                                 </div>
-                                <div class="row">
-                                    <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio3" name="hijos" value="option3">
-                                        <label class="form-check-label" for="radio3">Sí</label>
+                                <div class="row" required>
+                                    <div class="form-check-inline" >
+                                        <input type="radio" class="form-check-input" id="hijo" name="hijo" value="si" required>
+                                        <label class="form-check-label" for="hijo">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio4" name="hijos" value="option4">
-                                        <label class="form-check-label" for="radio4">No</label>
+                                        <input type="radio" class="form-check-input" id="hijo" name="hijo" value="no">
+                                        <label class="form-check-label" for="hijo">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -196,16 +183,16 @@
                         </div>
                         <div class="col-md-7 col-sm-12">
                             <div class="row">
-                                <p>Tengo carnet de conducir</p>
+                                <p>Tengo carnet de conducir*:</p>
                             </div>
                             <div class="row">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio5" name="carnet" value="option5">
-                                    <label class="form-check-label" for="radio5">Sí</label>
+                                    <input type="radio" class="form-check-input" id="carnet" name="carnet" value="si" required>
+                                    <label class="form-check-label" for="carnet">Sí</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio6" name="carnet" value="option6">
-                                    <label class="form-check-label" for="radio6">No</label>
+                                    <input type="radio" class="form-check-input" id="carnet" name="carnet" value="no">
+                                    <label class="form-check-label" for="carnet">No</label>
                                 </div> 
                             </div>
                         </div>
@@ -221,61 +208,54 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Tengo auto</p>
+                                    <p>Tengo auto*</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio7" name="auto" value="option7">
-                                        <label class="form-check-label" for="radio7">Sí</label>
+                                        <input type="radio" class="form-check-input" id="auto" name="auto" value="si" required>
+                                        <label class="form-check-label" for="auto">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio8" name="auto" value="option8">
-                                        <label class="form-check-label" for="radio8">No</label>
+                                        <input type="radio" class="form-check-input" id="auto" name="auto" value="no">
+                                        <label class="form-check-label" for="auto">No</label>
                                     </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            <div class="letras">
-                <button type="submit" class="btn btn-primary button" style="background-color: #7839BA; border-color: #7839BA;">Guardar</button>
-            </div> 
-          
-          </div>
-            
-        <div id="info" class="container tab-pane fade"><br>
             
             <div class="row">
                 <h3>¿Qué experiencia tienes con los niños?</h3>
+                <p class="letras" style="margin-top: -10px;">Responde la pregunta*</p>
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <img src="imagenes\niños1.png" alt="No encontrada" class="imagens">
                 </div>
-                <div class="col-md-6 experiencia col-sm-12" >
+                <div class="col-md-6 experiencia col-sm-12">
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio9" name="optradio9" value="option9">Sin experiencia, ¡pero dispuesto a aprender!.
-                        <label class="form-check-label" for="radio9"></label>
+                        <input type="radio" class="form-check-input" id="exp" name="exp" value="sin_exp" required>
+                        <label class="form-check-label" for="exp">Sin experiencia, ¡pero dispuesto a aprender!.</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio10" name="optradio9" value="option10">Experiencia con familiares: como sobrinos, hermanos, etc.
-                        <label class="form-check-label" for="radio10"></label>
+                        <input type="radio" class="form-check-input" id="exp" name="exp" value="exp_fam">
+                        <label class="form-check-label" for="exp">Experiencia con familiares: como sobrinos, hermanos, etc.</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio11" name="optradio9" value="option11">Experiencia profesional de 1 a 2 años.
-                        <label class="form-check-label" for="radio11"></label>
+                        <input type="radio" class="form-check-input" id="exp" name="exp" value="exp_prof1">
+                        <label class="form-check-label" for="exp">Experiencia profesional de 1 a 2 años.</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="radio12" name="optradio9" value="option12">Experiencia profesional de 2 a 3 años.
-                        <label class="form-check-label" for="radio12"></label>
+                        <input type="radio" class="form-check-input" id="exp" name="exp" value="exp_prof2">
+                        <label class="form-check-label" for="exp">Experiencia profesional de 2 a 3 años.</label>
                     </div>
                 </div>
             </div>
             
             <div class="row" style="margin-top: 35px;">
                 <h3>Formación</h3>
-                <p class="letras" style="margin-top: -10px;">¿Tienes algunas de estas cualificaciones? No es obligatorio, pero es un plus :)</p>
+                <p class="letras" style="margin-top: -10px;">¿Tienes algunas de estas cualificaciones?</p>
             </div>
 
               <div class="row">
@@ -286,16 +266,16 @@
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="row">
-                                <p>Primeros Auxilios</p>
+                                <p>Primeros Auxilios*</p>
                             </div>
                             <div class="row">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio1" name="optradio10" value="option1">
-                                    <label class="form-check-label" for="radio1">Sí</label>
+                                    <input type="radio" class="form-check-input" id="aux" name="aux" value="si" required>
+                                    <label class="form-check-label" for="aux">Sí</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio2" name="optradio10" value="option2">
-                                    <label class="form-check-label" for="radio2">No</label>
+                                    <input type="radio" class="form-check-input" id="aux" name="aux" value="no">
+                                    <label class="form-check-label" for="aux">No</label>
                                 </div> 
                             </div>
                         </div>
@@ -311,16 +291,16 @@
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="row">
-                                <p>Titulo o formación en educación infantil</p>
+                                <p>Titulo o formación en educación infantil*</p>
                             </div>
                             <div class="row">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio1" name="optradio11" value="option1">
-                                    <label class="form-check-label" for="radio1">Sí</label>
+                                    <input type="radio" class="form-check-input" id="titulo" name="titulo" value="si" required>
+                                    <label class="form-check-label" for="titulo">Sí</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio2" name="optradio11" value="option2">
-                                    <label class="form-check-label" for="radio2">No</label>
+                                    <input type="radio" class="form-check-input" id="titulo" name="titulo" value="no">
+                                    <label class="form-check-label" for="titulo">No</label>
                                 </div> 
                             </div>
                         </div>
@@ -336,16 +316,16 @@
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="row">
-                                <p>Titulo o experiencia con niños con necesidades especiales</p>
+                                <p>Titulo o experiencia con niños con necesidades especiales*</p>
                             </div>
                             <div class="row">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio1" name="optradio12" value="option1">
-                                    <label class="form-check-label" for="radio1">Sí</label>
+                                    <input type="radio" class="form-check-input" id="especial" name="especial" value="si" required>
+                                    <label class="form-check-label" for="especial">Sí</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio2" name="optradio12" value="option2">
-                                    <label class="form-check-label" for="radio2">No</label>
+                                    <input type="radio" class="form-check-input" id="especial" name="especial" value="no">
+                                    <label class="form-check-label" for="especial">No</label>
                                 </div> 
                             </div>
                         </div>
@@ -356,45 +336,46 @@
             <div class="letras">
                 <h3>¿Tienes alguna recomendación?</h3>
                 <div class="form-check-inline" style="padding-top: 20px; padding-bottom: 20px;">
-                    <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-                    <label class="form-check-label" for="check1">Tengo recomendaciones de familias para las que he trabajado, y puedo proporcionar los datos de contacto.</label>
+                    <input type="checkbox" class="form-check-input" id="recomendacion" name="recomendacion">
+                    <label class="form-check-label" for="recomendacion">Tengo recomendaciones de familias para las que he trabajado, y puedo proporcionar los datos de contacto.</label>
                 </div>
             </div>
 
             <div class="row letras">
                 <h3>¿En qué idioma o idiomas podrías hablar a los niños?</h3>
-                <label for="idioma" class="form-label letras">Seleccione de la lista:</label>
-                <input class="form-control forinp" list="idiomas" name="idioma" id="idioma" style="max-width: 100%; margin: auto; width: 200px;">
-                    <datalist id="idiomas">
-                        <option value="Francés">
-                        <option value="Inglés">
-                        <option value="Español">
-                        <option value="Alemán">
-                        <option value="Italiano">
-                        <option value="Portugués">
-                        <option value="Ruso">
-                        <option value="Árabe">
-                        <option value="Chino">
-                        <option value="holandés">   
-                    </datalist> 
-                    <div class="letras">
-                        <button type="submit" class="btn btn-primary button" style="background-color: #7839BA; border-color: #7839BA;">Validar</button>   
-                    </div>
+                <div class="form-group">
+                    <label class="form-label" style="margin-top: 10px;" for="idioma">Seleccione de la lista:</label>
+                    <select class="form-select  forinp" name="idioma" id="idioma" style="max-width: 100%; margin: auto; width: 200px;">
+                    <option selected disabled value="">Escoge...</option>
+                    <option>Francés</option>
+                    <option>Inglés</option>
+                    <option>Alemán</option>
+                    <option>Italiano</option>
+                    <option>Portugués</option>
+                    <option>Ruso</option>
+                    <option>Árabe</option>
+                    <option>Chino</option>
+                    <option>holandés</option>
+                    <option>Creole</option>
+                    </select>
+                </div>
             </div>
 
             <div class="row letras">
                 <h3>Tarifa</h3>
-                <p>Precio por hora para el cuidado de niños</p>
+                <p>Precio por hora para el cuidado de niños*</p>
             </div>
             <div class="input-group forinp">
                 <div class="input-group" style="max-width: 100%; margin: auto; width: 260px;">
                     <span class="input-group-text">$</span>
-                    <input id="rate_amount" class="form-control" type="number" inputmode="decimal" min="500" max="990000000" step="any" name="rate_amount" value="">
+                    <input id="tarifa" class="form-control" type="text" name="tarifa" requered>
                     <span class="input-group-text">/hora</span>
                 </div>
             </div>
             <div class="row form-text letras">
-                <p>Tarifa media que ofrecen otras familias: $3.000</p>
+                <p>Tarifa media que ofrecen otros cuidadores es de: $3000.
+                    por ende lo minimo es 3000 y el maximo 10000.
+                </p>
             </div>
 
             <div class="row">
@@ -409,16 +390,16 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Cocinar</p>
+                                    <p>Cocinar*</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio1" name="optradio13" value="option1">
-                                        <label class="form-check-label" for="radio1">Sí</label>
+                                        <input type="radio" class="form-check-input" id="cocina" name="cocina" value="si" required>
+                                        <label class="form-check-label" for="cocina">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio2" name="optradio13" value="option2">
-                                        <label class="form-check-label" for="radio2">No</label>
+                                        <input type="radio" class="form-check-input" id="cocina" name="cocina" value="no">
+                                        <label class="form-check-label" for="cocina">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -434,16 +415,16 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Ayudar con las tareas</p>
+                                    <p>Ayudar con las tareas*</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio1" name="optradio14" value="option1">
-                                        <label class="form-check-label" for="radio1">Sí</label>
+                                        <input type="radio" class="form-check-input" id="tarea" name="tarea" value="si" required>
+                                        <label class="form-check-label" for="tarea">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio2" name="optradio14" value="option2">
-                                        <label class="form-check-label" for="radio2">No</label>
+                                        <input type="radio" class="form-check-input" id="tarea" name="tarea" value="no">
+                                        <label class="form-check-label" for="tarea">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -459,16 +440,16 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Mascotas</p>
+                                    <p>Mascotas*</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio1" name="optradio15" value="option1">
-                                        <label class="form-check-label" for="radio1">Sí</label>
+                                        <input type="radio" class="form-check-input" id="mascota" name="mascota" value="si" required>
+                                        <label class="form-check-label" for="mascota">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio2" name="optradio15" value="option2">
-                                        <label class="form-check-label" for="radio2">No</label>
+                                        <input type="radio" class="form-check-input" id="mascota" name="mascota" value="no">
+                                        <label class="form-check-label" for="mascota">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -484,16 +465,16 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Salir con los niños</p>
+                                    <p>Salir con los niños*</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio1" name="optradio16" value="option1">
-                                        <label class="form-check-label" for="radio1">Sí</label>
+                                        <input type="radio" class="form-check-input" id="nino" name="nino" value="si" required>
+                                        <label class="form-check-label" for="nino">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio2" name="optradio16" value="option2">
-                                        <label class="form-check-label" for="radio2">No</label>
+                                        <input type="radio" class="form-check-input" id="nino" name="nino" value="no">
+                                        <label class="form-check-label" for="nino">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -513,16 +494,16 @@
                         </div>
                         <div class="col-md-7 col-sm-12">
                             <div class="row">
-                                <p>Manualidades</p>
+                                <p>Manualidades*</p>
                             </div>
                             <div class="row">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio1" name="optradio17" value="option1">
-                                    <label class="form-check-label" for="radio1">Sí</label>
+                                    <input type="radio" class="form-check-input" id="manualidad" name="manualidad" value="si" required>
+                                    <label class="form-check-label" for="manualidad">Sí</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" id="radio2" name="optradio17" value="option2">
-                                    <label class="form-check-label" for="radio2">No</label>
+                                    <input type="radio" class="form-check-input" id="manualidad" name="manualidad" value="no">
+                                    <label class="form-check-label" for="manualidad">No</label>
                                 </div> 
                             </div>
                         </div>
@@ -538,16 +519,16 @@
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="row">
-                                    <p>Leer a los niños</p>
+                                    <p>Leer a los niños*</p>
                                 </div>
                                 <div class="row">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">
-                                        <label class="form-check-label" for="radio1">Sí</label>
+                                        <input type="radio" class="form-check-input" id="leer" name="leer" value="si" required>
+                                        <label class="form-check-label" for="leer">Sí</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
-                                        <label class="form-check-label" for="radio2">No</label>
+                                        <input type="radio" class="form-check-input" id="leer" name="leer" value="no">
+                                        <label class="form-check-label" for="leer">No</label>
                                     </div> 
                                 </div>
                             </div>
@@ -559,11 +540,7 @@
                     <h3>Calendario de disponibilidad</h3>
                 </div>
 
-                <form action="../../form-result.php" target="_blank">
-
-                    <p class="letras">Seleccione la semana he ingrese los dias y horas en las que puede trabajar: <input type="week" name="unasemana" value="2022-04-06" min="2022-W14" max="2031-W24""></p>
-                  
-                </form>
+                <p class="letras">Seleccione la semana he ingrese los dias y horas en las que puede trabajar: <input type="week" name="semana" id="semana" class="form-control" style="width: 100%; max-width: 300px; margin: auto;" required></p>
             
             
                 <div class="container mt-3" >           
@@ -1306,14 +1283,14 @@
                       </tbody>
                     </table>
                   </div>
-
-            <div class="letras">
-                <a href="Perfil.html"><button type="submit" class="btn btn-primary button" style="background-color: #7839BA; border-color: #7839BA;">Guardar</button></a>
-            </div>
-
+                <div class="letras">
+                    <b><p id="mensaje" style="color: red;"></p></b>
+                    <button type="submit" class="btn btn-primary button" style="background-color: #7839BA; border-color: #7839BA;">Guardar</button>
+                </div>
+                </form> 
           </div>
-        </div>
-      </div>
+
+    
 
 <div class="termino">
         <div class="container">
@@ -1368,5 +1345,7 @@
             </div>
         </div>
 </div>
+<script src="js\validacion.js"></script>
+<script src="js\moment.js"></script>
 </body>
 </html>
