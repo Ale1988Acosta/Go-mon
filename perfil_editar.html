@@ -97,41 +97,55 @@
                 <div class="row" style="border-radius: 10px; ">
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                         <p>Correo:*</p>
-                        <input type="text" class="form-control" value="bab.fernández@gmail.com" name="email" style="border-radius: 50px;" required>
+                        <input type="text" class="form-control" value="bab.fernández@gmail.com" name="email" id="email" style="border-radius: 50px;" required>
                     </div>
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
-                    <p>Direccion:</p>
+                    <p>Direccion*:</p>
                     <input type="text" class="form-control" value="Avenida Independencia 123" name="direccion" style="border-radius: 50px;" required>
                     </div>
                 </div>
                 <div class="row" style="border-radius: 10px; ">
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
-                        <p>Comuna:</p>
+                        <p>Comuna*:</p>
                         <input type="text" class="form-control" value="Independencia" name="comuna" style="border-radius: 50px;" required>
                     </div>
                 </div>
-                <p id="mensaje" class="color" style="text-align: center;"></p>
+                <p id="mensaje" style="text-align: center; color: red;"></p>
                 <input type="submit" class="btn btn-primary" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px; ">
         
         </form>
             <a href="descripcion2.html" style="text-decoration: none;" ><button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px;">Otros datos</button></a>
           </div>
           <div id="menu1" class="container tab-pane "><br>
-            <h3 style="color: #7839BA;"><b>Verificacion de la Identidad</b></h3>
-            <div class="row mb-3 " style="margin-top: 5%;">
-              <label1 for="cedula" class="col-sm-2 col-form-label">Cedula de Identidad</label1>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="cedula" style="border-radius: 50px;" placeholder="11.111.111-k">
-              </div>
+            <div class="row">
+                <h3 style="color: #7839BA;"><b>Verificacion de la Identidad</b></h3>
             </div>
-            <div class="row mb-3 " style="margin-top: 5%;">
-              <label1 for="formFileMultiple" class="col-sm-2 col-form-label">Certificados de Antecedentes</label1>
-              <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFileMultiple" multiple style="border-radius: 50px;">
-              </div>
-            </div>
+            <div class="row">
 
-            <button type="submit" class="btn" style="margin-top: 5%; background-color: #7839BA; color: white; border-color: #7839BA;" >Enviar</button>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form action="" method="POST" name="formulario" id="form2">
+                        <div class="row" >
+                        <div class="col-md-12" style="margin-bottom: 20px;">
+                            <p>Cedula de Identidad</p>
+                            <input type="text" class="form-control" name="rut" id="rut" style="border-radius: 50px;" value="11.111.111-K" required>
+                            
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-12" style="margin-bottom: 20px;">
+                            <p >Certificados de Antecedentes</p>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple style="border-radius: 50px;" required>
+                        </div>
+                        </div>
+                        <p id="mensaje1"  style="text-align: center; color: red;"></p>
+                        <input type="submit" class="btn btn-primary" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px; ">
+                </form>
+                </div>
+                <div class="col-md-2"></div>
+
+            </div>
+            
         </div>
         <div id="menu2" class="container tab-pane "><br>
             <div class="row" style="text-align: center;">
