@@ -344,8 +344,8 @@
             <div class="row letras">
                 <h3>¿En qué idioma o idiomas podrías hablar a los niños?</h3>
                 <div class="form-group">
-                    <label class="form-label" style="margin-top: 10px;" for="idioma">Seleccione de la lista:</label>
-                    <select class="form-select  forinp" name="idioma" id="idioma" style="max-width: 100%; margin: auto; width: 200px;">
+                <p>Seleccione de la lista:</p>
+                <select class="form-select  forinp" id="mySelect" onchange="myFunction()" style="max-width: 100%; margin: auto; width: 200px;">
                     <option selected disabled value="">Escoge...</option>
                     <option>Francés</option>
                     <option>Inglés</option>
@@ -357,10 +357,16 @@
                     <option>Chino</option>
                     <option>holandés</option>
                     <option>Creole</option>
-                    </select>
+                </select>
+                <p id="demo"></p>
+                <script>
+                function myFunction() {
+                var x = document.getElementById("mySelect").value;
+                document.getElementById("demo").innerHTML = "Seleccionaste el idioma: " + x;
+                }
+                </script>
                 </div>
             </div>
-
             <div class="row letras">
                 <h3>Tarifa</h3>
                 <p>Precio por hora para el cuidado de niños*</p>
@@ -1284,13 +1290,11 @@
                     </table>
                   </div>
                 <div class="letras">
-                    <b><p id="mensaje" style="color: red;"></p></b>
+                    <p id="mensaje" style="color: red;"></p>
                     <button type="submit" class="btn btn-primary button" style="background-color: #7839BA; border-color: #7839BA;">Guardar</button>
                 </div>
                 </form> 
           </div>
-
-    
 
 <div class="termino">
         <div class="container">
@@ -1345,7 +1349,7 @@
             </div>
         </div>
 </div>
-<script src="js\validacion.js"></script>
-<script src="js\moment.js"></script>
+<script src="js/validacion.js"></script>
+<script src="js/moment.js"></script>
 </body>
 </html>
