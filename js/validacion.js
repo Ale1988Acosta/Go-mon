@@ -42,14 +42,16 @@ $(document).ready(function(){
         //video
         var video = $("#recording").val();
         var reg=/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \?=.-]*)*\/?$/;   
-        if(!reg.test(video)){  
+        if(video.length==0){
+            entrar=false;
+        }else if (!reg.test(video)){  
             mensajeMostrar+="Debe ingresar una dirección o link de su video.<br>";
             entrar=true;
         }
 
         //fecha de nacimiento
         var añohoy = new Date();
-        var year = añohoy.getFullYear()
+        var year = añohoy.getFullYear();
         //transforma el valor en una fecha (usando la clase Date  DD/MM/AA) y obtén el valor del año con el método getFullYear().
         var naci = $("#nacim").val();
         var añonaci = new Date(naci).getFullYear();
@@ -75,9 +77,9 @@ $(document).ready(function(){
             entrar=true;
         }
 
-        var año = moment().format('YYYY');
+        var anno = moment().format('YYYY');
         var sem = moment().format('WW');
-        var hoy = (año+"-W"+sem);
+        var hoy = (anno+"-W"+sem);
         var fecha = $("#semana").val();
 
         if(fecha<hoy){
@@ -89,7 +91,6 @@ $(document).ready(function(){
             $("#mensaje").html(mensajeMostrar);
         }
         else{
-            $("#mensaje").html("Registro Completo");
             onclick=$(location).attr('href','Perfil.html');
         }
     });
