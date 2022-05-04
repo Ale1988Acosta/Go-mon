@@ -50,16 +50,16 @@ $(document).ready(function(){
         }
 
         //fecha de nacimiento
-        var añohoy = new Date();
-        var year = añohoy.getFullYear();
+        var anohoy = new Date();
+        var year = anohoy.getFullYear();
         //transforma el valor en una fecha (usando la clase Date  DD/MM/AA) y obtén el valor del año con el método getFullYear().
         var naci = $("#nacim").val();
-        var añonaci = new Date(naci).getFullYear();
+        var anonaci = new Date(naci).getFullYear();
         var date = new Date().toLocaleDateString('en-CA');
         if(naci>=date){
             mensajeMostrar+="la fecha de nacimiento debe ser anterior al dia de hoy.<br>";
             entrar=true;
-        }else if (year-añonaci<18){
+        }else if (year-anonaci<18){
             mensajeMostrar+="Debes ser mayor de edad.<br>";
             entrar=true;
         }
