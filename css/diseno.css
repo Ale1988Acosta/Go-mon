@@ -167,6 +167,38 @@ hr {
     
 }
 
+.colorBlanco{
+    color: white;
+}
+
+.error{
+    color: rgb(242, 59, 59);
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    display: none;
+}
+
+.realizado{
+    color:#7839BA ;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    display: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.error2{
+    color: rgb(242, 59, 59);
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    display: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
 
 
 
