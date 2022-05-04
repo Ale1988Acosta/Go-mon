@@ -1,5 +1,6 @@
 
 var regex = /[\w-\.]{2,}@[a-zA-Z0-9._-]+\.[\w-]{2,4}/;
+var conta = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
 $(document).ready(function(){
     $("#entrar").click(function(e){
         e.preventDefault();
@@ -12,7 +13,7 @@ $(document).ready(function(){
         }else{
             $("#mensajeC").fadeOut();
             
-            if(clave == ""){
+            if(clave == ""||!conta.test(clave)){
                 $("#mensajeP").fadeIn();
                 return false;
                 

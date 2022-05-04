@@ -20,18 +20,11 @@ $(document).ready(function(){
         let mensajes ="";
         let entrar = false;
         var nom = $("#nombre").val();
-        var ap = $("#p_apellido").val();
 
         //nombre
-        if(nom.trim().length<4){
+        if(nom.trim().length<3){
             mensajes += "El nombre debe contener mas de tres letras<br>";
             entrar=true;
-        }
-
-        var letra = nom.charAt(0);
-        if(!esMayuscula(letra)){
-        mensajes +="la primera letra del nombre esta en minúscula<br>";
-        entrar=true;
         }
 
         //p_apellido
@@ -39,13 +32,7 @@ $(document).ready(function(){
             mensajes += "Debe ingresar el primer apellido<br>";
             entrar=true;
         }
-
-        var letra = ap.charAt(0);
-        if(!esMayuscula(letra)){
-        mensajes +="la primera letra del apellido esta en minúscula<br>";
-        entrar=true;
-        }
-
+        
         //s_apellido
         if($("#s_apellido").val().trim().length==0){
             mensajes += "Debe ingresar el segundo apellido<br>";
@@ -80,6 +67,8 @@ $(document).ready(function(){
 
         //contraseña
         var pass= $("#password").val();
+        var nume = /^.{8,16}$/;
+        
         if(pass.trim().length<8 || pass.trim().length >16){
             mensajes += "El largo de la contraseña debe ser mas que 8 y menos que 16 <br>";
             entrar=true;
@@ -97,21 +86,17 @@ $(document).ready(function(){
 
         var com= $("#comuna").val();
         if(com.trim().length<3){
-            mensajes += "No existen comunas con solo 3 letras<br>";
+            mensajes += "No existen comunas con solo 2 letras<br>";
             entrar=true;
         }
 
         if(entrar){
             $("#mensaje").html(mensajes);
         }else{
-            $("#mensaje").html("Datos actualizados correctamente");
+            $("#mensaje").html("Formulario enviado");
         }
 
     });
-
-    function esMayuscula(letra){
-        return letra == letra.toUpperCase();
-    }
 })
 
 

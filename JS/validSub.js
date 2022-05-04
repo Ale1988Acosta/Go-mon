@@ -8,7 +8,7 @@ $("#sub").click(function(s){
         $("#mensajeS").fadeIn();
         return false;
     }else{
-        $("#mensajeS").fadeOut(2500);
+        $("#mensajeS").fadeOut();
         $("#mensajeSus").fadeIn();
         $("#mensajeSus").fadeOut(2500);
         return false;
