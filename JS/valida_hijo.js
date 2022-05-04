@@ -24,18 +24,24 @@ $(document).ready(function(){
         }
 
         //fecha de nacimiento
+        var hoy = new Date();
+        var year = hoy.getFullYear();
         //transforma el valor en una fecha (usando la clase Date  DD/MM/AA) y obtén el valor del año con el método getFullYear().
         var star = $("#start").val();
+        var anonaci = new Date(star).getFullYear();
         var dat = new Date().toLocaleDateString('en-CA');
         if(star>=dat){
-            mensajesh +="La fecha de nacimiento debe ser anterior al dia de hoy.<br>";
+            mensajesh+="La fecha de nacimiento debe ser anterior al dia de hoy.<br>";
+            entrar=true;
+        }else if (year-anonaci<2){
+            mensajesh+="Debe tener mas de 2 años en menor.<br>";
             entrar=true;
         }
 
         if(entrar){
             $("#mensaj").html(mensajesh);
         }else{
-            $("#mensaj").html("Formulario enviado");
+            $("#mensaj").html("Datos actualizados");
         }
 
     });
