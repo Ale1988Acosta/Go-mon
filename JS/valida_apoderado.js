@@ -80,11 +80,6 @@ $(document).ready(function(){
 
         //contraseña
         var pass= $("#password").val();
-        var nume = /^.{8,16}$/;
-        if(!nume.test(pass)){  
-            mensajes +="Debe ingresar un correo valido<br>";
-            entrar=true;
-        }
         if(pass.trim().length<8 || pass.trim().length >16){
             mensajes += "El largo de la contraseña debe ser mas que 8 y menos que 16 <br>";
             entrar=true;
