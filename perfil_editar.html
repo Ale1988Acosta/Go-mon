@@ -13,6 +13,7 @@
     <link tipe="text/css" rel="stylesheet" href="CSS/formato.css">
     <link tipe="text/css" rel="stylesheet" href="CSS/diseno.css">
     <link rel="icon" type="image/x-icon" href="imagenes/Go_monCR.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
     <title>Perfil</title>
@@ -1078,8 +1079,10 @@
                 <div class="col-md-5 col-sm-12">
                     <div class="flex letras">
                         <p  style="color: white;">¿Quieres recibir nuestras noticias?</p>
-                        <input class="ingreso" type="text" name="email" placeholder="Ingresa tu email" id="box_suscribe">
-                        <button class="btn btn-light button">Suscríbete</button>
+                        <input class="ingreso" type="text" name="email" placeholder="Ingresa tu email" id="email">
+                        <button class="btn btn-light button" id="sub">Suscríbete</button>
+                        <div id="mensajeS" class="error2">Correo erroneo, el formato debe de ser ejemplo@example.com</div>
+                        <div id="mensajeSus" class="realizado" style="margin-left: 35px;">Su suscripsión ha sido realizada</div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 centra">
@@ -1115,6 +1118,7 @@
         
 <script src="java/java_j.js"></script>  
 <script src="JS/valida_calendario.js"></script>   
-<script src="JS/moment.js"></script>  
+<script src="JS/moment.js"></script>
+<script src="JS/validSub.js"></script>  
 </body>
 </html>

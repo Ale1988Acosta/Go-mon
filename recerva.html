@@ -279,8 +279,10 @@
                     <div class="flex letras">
                         <p style="color: white;">¿Quieres recibir nuestras noticias?</p>
                         <input class="ingreso" type="text" name="email" placeholder="Ingresa tu email"
-                            id="box_suscribe">
-                        <button class="btn btn-light button">Suscríbete</button>
+                            id="email">
+                        <button class="btn btn-light button" id="sub">Suscríbete</button>
+                        <div id="mensajeS" class="error2">Correo erroneo, el formato debe de ser ejemplo@example.com</div>
+                        <div id="mensajeSus" class="realizado" style="margin-left: 35px;">Su suscripsión ha sido realizada</div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 centra">
@@ -321,5 +323,6 @@
         </div>
     </div>
 <script src="js\recerva.js"></script>
+<script src="JS/validSub.js"></script>
 </body>
 </html>

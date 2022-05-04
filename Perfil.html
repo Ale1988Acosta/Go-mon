@@ -11,7 +11,8 @@
     <link tipe="text/css" rel="stylesheet" href="CSS/CSS_E.css">
     <link tipe="text/css" rel="stylesheet" href="CSS/formato.css">
     <link tipe="text/css" rel="stylesheet" href="CSS/diseno.css">
-    <link rel="icon" type="image/x-icon" href="imagenes/Go_monCR.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/imagenes/Go_monCR.png">
 
 
     <title>Perfil</title>
@@ -25,7 +26,6 @@
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ms-auto">
-                
               
               <li class="nav-item">
                 <a class="nav-link" href="Pag_Principal.html">Cerrar Sesión</a>
@@ -73,47 +73,54 @@
         <div id="home" class="container tab-pane active"><br>
 
             <h3 style="color: #7839BA;"><b>Datos Personales</b></h3>
-            <form action="" method="POST" name="formulario" id="form1">
+            <form>
                 <div class="row" >
                 <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Nombre*:</p>
-                    <input type="text" class="form-control"  name="nombre" style="border-radius: 50px;" value="Barbara" readonly>
+                    <input type="text" class="form-control" placeholder="Javiera" name="nombre" style="border-radius: 50px;">
                 </div>
                 <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Apellidos*:</p>
-                    <input type="text" class="form-control" name="apellidos" style="border-radius: 50px;" value="Fernández" readonly>  
+                    <input type="text" class="form-control" placeholder="Cambas" name="apellidos" style="border-radius: 50px;">  
                 </div>
                 </div>
+            </form>
+
+            <form>
                 <div class="row">
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Correo:*</p>
-                    <input type="text" class="form-control" value="bab.fernández@gmail.com" name="email" style="border-radius: 50px;" readonly>
+                    <input type="text" class="form-control" placeholder="jav.cambas@gmail.com" name="email" style="border-radius: 50px;">
                     </div>
                     <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
                     <p>Contraseña:*</p>
-                    <input type="password" class="form-control" name="email" style="border-radius: 50px;" value="123456789" readonly>
-                    </div>
-                </div>
-                <div class="row" style="border-radius: 10px; ">
-                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
-                    <p>Direccion:</p>
-                    <input type="text" class="form-control" value="Avenida Independencia 123" name="direccion" style="border-radius: 50px;" readonly>
-                    </div>
-                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
-                    <p>Comuna:</p>
-                    <input type="text" class="form-control" value="Independencia" name="comuna" style="border-radius: 50px;" readonly>
+                    <input type="text" class="form-control" placeholder="***************" name="email" style="border-radius: 50px;">
                     </div>
                 </div>
             </form>
-            <a href="perfil_editar.html" style="text-decoration: none;" ><button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px;">Editar Datos</button></a>
-            <a href="descripcion2.html" style="text-decoration: none;" ><button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px;">Otros datos</button></a>
+
+
+            <form>
+                <div class="row" style="border-radius: 10px; ">
+                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                    <p>Direccion:</p>
+                    <input type="text" class="form-control" placeholder="Avenida Independencia 123" name="direccion" style="border-radius: 50px;">
+                    </div>
+                    <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                    <p>Comuna:</p>
+                    <input type="text" class="form-control" placeholder="Independencia" name="comuna" style="border-radius: 50px;">
+                    </div>
+                </div>
+            </form>
+            <button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px; ">Guardar</button>
+            <a href="descripcion.html" style="text-decoration: none;" ><button type="submit" class="btn" style="background-color: #7839BA; border-color: #7839BA; color: white; text-align: center; margin: auto; display: block; margin-top: 15px;">Otros datos</button></a>
           </div>
           <div id="menu1" class="container tab-pane "><br>
             <h3 style="color: #7839BA;"><b>Verificacion de la Identidad</b></h3>
             <div class="row mb-3 " style="margin-top: 5%;">
               <label1 for="cedula" class="col-sm-2 col-form-label">Cedula de Identidad</label1>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="cedula" style="border-radius: 50px;" value="11.111.111-k" readonly>
+                <input type="text" class="form-control" id="cedula" style="border-radius: 50px;">
               </div>
             </div>
             <div class="row mb-3 " style="margin-top: 5%;">
@@ -933,7 +940,7 @@
 
                       <!-- Modal footer -->
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: #7839BA; border-color: #7839BA;">Enviar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
                       </div>
                    </div>
                   </div>
@@ -976,7 +983,7 @@
 
                       <!-- Modal footer -->
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: #7839BA; border-color: #7839BA;">Enviar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
                       </div>
                    </div>
                   </div>
@@ -1019,7 +1026,7 @@
 
                       <!-- Modal footer -->
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: #7839BA; border-color: #7839BA;">Enviar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
                       </div>
                    </div>
                   </div>
