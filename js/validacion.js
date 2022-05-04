@@ -91,7 +91,7 @@ $(document).ready(function(){
             $("#mensaje").html(mensajeMostrar);
         }
         else{
-            onclick=$(location).attr('href','Perfil.html');
+            onclick=$(location).attr('href','Perfil_editar.html');
         }
     });
 })
