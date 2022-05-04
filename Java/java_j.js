@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function(){
     form1.addEventListener("submit" , e/* nombre, puede ser cualquiera*/  => {
     e.preventDefault(); /* prevenir el envio del formulario */
