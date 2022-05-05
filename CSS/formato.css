@@ -105,9 +105,9 @@ h3,h6{
     padding: 30px;
   }
 
-  .formacion {
+.formacion {
     position: relative;
-    width: 600px;
+    width: 500px;
     margin: auto;
     display: block;
     padding: 30px;
